@@ -32,7 +32,7 @@ body {
   display: flex;
   place-items: center;
   justify-content: center;
-  min-width: 320px;
+  /* min-width: 320px; */
   min-height: 100vh;
 }
 
@@ -78,7 +78,9 @@ span{
   color: red;
 }
 
-
+#root{
+  max-width: 500px;
+}
 
 .input-section{
   display: flex;
@@ -93,6 +95,48 @@ span{
 
 
 nav{
-  position: sticky;
+  position: fixed;
   top: 0px;
+  left: 0px;
+  width: 100vw;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-bottom: rgb(64, 64, 64) solid .5px;
+  background-color: #d8d8d8;
+  padding: 1rem;
+}
+
+.account-settings > div{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.account-settings>div h1{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.account-settings img{
+  width: 30%;
+  border-radius: 50%;
+}
+
+@media all and (max-width: 580px){
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    /* min-height: 30vh; */
+    padding: 1rem;
+  }
+
+  #root{
+    width: 80%;
+  }
+
+  .heading{
+    font-size: 2rem;
+  }
+  
 }

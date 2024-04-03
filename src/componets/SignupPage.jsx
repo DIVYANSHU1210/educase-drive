@@ -28,25 +28,20 @@ function SignupPage() {
                     password
                 );
 
-                const user = userCredentials.user;
+                const authUser = userCredentials.user;
 
-                await setDoc(doc(db, "users", user.uid),{
+                const myUser = {
                     name:name,
                     email:user.email,
                     company : company,
                     isAgency : isAgency,
-                    uid:user.uid
-                })
+                    uid:authUser.uid
+                }
 
-                dispatch(
-                    setUser({
-                        name:name,
-                        email:user.email,
-                        company : company,
-                        isAgency : isAgency,
-                        uid:user.uid,
-                    })
-                )
+                await setDoc(doc(db, "users", authUser.uid), myUser)
+
+                dispatch(setUser(myUser))
+                localStorage.setItem("user" , JSON.stringify(myUser))
                 navigate("/account-settings");
             }catch(err){
                 console.log(err);

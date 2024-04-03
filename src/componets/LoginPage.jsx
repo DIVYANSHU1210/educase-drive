@@ -32,13 +32,17 @@ function LoginPage() {
 
         console.log("userDoc", userDoc.data());
 
-        dispatch(
-          setUser({
-            name: userData.name,
-            email: user.email,
-            uid: user.uid,
-          })
-        );
+        const myUser = {
+          name: userData.name,
+          email: user.email,
+          company: userData.company,
+          isAgency : userData.isAgency,
+          uid: user.uid, 
+        }
+
+        dispatch(setUser(myUser));
+
+        localStorage.setItem("user" , JSON.stringify(myUser))
         navigate("/account-settings");
       } catch (err) {
         console.log(err);
