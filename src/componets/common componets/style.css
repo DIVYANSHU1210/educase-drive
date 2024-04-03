@@ -1,0 +1,25 @@
+.custom-input{
+    position: relative;
+    margin-block: 1rem;
+    width: 100%;
+}
+.custom-input input{
+    padding-block: 1rem;
+    padding-left: 1rem;
+    width: 100%;  
+}
+.custom-input label{
+    position: absolute;
+    top:-10px;
+    left: 10px;
+    background-color: white;
+    font-size: smaller;
+    padding-inline: .3rem;
+}
+
+
+
+.custom-button{
+    margin-block: .5rem;
+    width: 100%;
+}

@@ -1,3 +1,8 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -66,4 +71,28 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+span{
+  color: red;
+}
+
+
+
+.input-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.heading{
+  margin-bottom: 1rem;
+}
+
+
+nav{
+  position: sticky;
+  top: 0px;
 }

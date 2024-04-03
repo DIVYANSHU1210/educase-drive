@@ -48,8 +48,8 @@ function LoginPage() {
     }
   };
   return (
-    <div>
-      <h1>Signin to your PopX account</h1>
+    <div className="login-page">
+      <h1 className = "heading" style={{marginBottom: "2rem"}}>Signin to your PopX account</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, sint?
       </p>

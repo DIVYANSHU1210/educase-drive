@@ -12,8 +12,8 @@ function Welcome() {
         navigate("/login")
     }
   return (
-    <div>
-        <h1>Welcome to PopX</h1>
+    <div className="welcome">
+        <h1 className = "heading">Welcome to PopX</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, tempore!</p>
         <CustomButton clickFunc={handleSignupPage} title={"Create Account"} primary={true}/>
         <br/>

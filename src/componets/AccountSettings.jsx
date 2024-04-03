@@ -14,7 +14,7 @@ function AccountSettings() {
         navigate("/")
     }
   return (
-    <div>
+    <div className='account-settings'>
         <nav><p>Account settings</p></nav>
         <div>
             <img src={userimage} alt="" />

@@ -62,17 +62,22 @@ function SignupPage() {
     }
 
     return (
-        <div>
-            <h1>Create your PopX account</h1>
-            <CustomInput labelName="Full Name" value={name} changeFunc={setName} type="text" required={true} />
-            <CustomInput labelName="Email address" value={email} changeFunc={setEmail} type="email" required={true}/>
-            <CustomInput labelName="Password" value={password} changeFunc={setPassword} type="password" required={true}/>
-            <CustomInput labelName="Company Name" value={company} changeFunc={setCompany} type="text" required={false}/>
-            <p>Are you an agency <span>*</span></p>
-            <input type="radio" id="yes" name="isAgency" value="Yes" checked={isAgency} onChange={handleAgencyChange} />
-            <label htmlFor="yes">Yes</label>
-            <input type="radio" id="no" name="isAgency" value="No" checked={!isAgency} onChange={handleAgencyChange} />
-            <label htmlFor="no">No</label><br/>
+        <div className='signup-page'>
+            <h1 className = "heading">Create your PopX account</h1>
+            <div className='input-section'>
+                <CustomInput labelName="Full Name" value={name} changeFunc={setName} type="text" required={true} />
+                <CustomInput labelName="Email address" value={email} changeFunc={setEmail} type="email" required={true}/>
+                <CustomInput labelName="Password" value={password} changeFunc={setPassword} type="password" required={true}/>
+                <CustomInput labelName="Company Name" value={company} changeFunc={setCompany} type="text" required={false}/>
+            </div>
+            <div>
+                    <p>Are you an agency <span>*</span></p>
+                    <input type="radio" id="yes" name="isAgency" value="Yes" checked={isAgency} onChange={handleAgencyChange} />
+                    <label htmlFor="yes" style={{marginInlineEnd:"1rem"}}>Yes</label>
+                    <input type="radio" id="no" name="isAgency" value="No" checked={!isAgency} onChange={handleAgencyChange} />
+                    <label htmlFor="no">No</label><br/>
+                </div>
+            
             
             <CustomButton clickFunc={(e)=>handleSignup(e)} title={"Create Account"} primary={true} />
         </div>
