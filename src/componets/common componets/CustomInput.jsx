@@ -14,6 +14,7 @@ function CustomInput({ labelName, changeFunc, value, type, required, star }) {
           changeFunc(e.target.value);
         }}
         type={type}
+        autoComplete={type}
         required="required"
       ></input>
     </div>
