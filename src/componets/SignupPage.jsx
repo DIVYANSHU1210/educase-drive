@@ -32,7 +32,7 @@ function SignupPage() {
 
                 const myUser = {
                     name:name,
-                    email:user.email,
+                    email: authUser.email,
                     company : company,
                     isAgency : isAgency,
                     uid:authUser.uid
